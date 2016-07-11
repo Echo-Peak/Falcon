@@ -1,0 +1,112 @@
+.editor{
+  position: absolute;
+  width:100%;
+  height:100%;
+  background:white;
+  //min-width: 100%;
+  //min-height: 100%;
+  z-index: 120;
+  margin-left:0;
+  transform:translateY(-50%) scale(0.8);
+  transition: all .4s;
+  opacity: 0;
+  box-shadow:0px 0px 30px rgba(0,0,0,0.5);
+  &.animate{
+    transform:translateY(0%) scale(1);
+    opacity: 1;
+  }
+  > form{
+      > .title{
+      padding-top:10px;
+      text-align: center;
+      > input{
+        font-size: 1.5em;
+        border: none;
+        outline: none;
+        width:98%;
+        box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+        &:focus{
+          box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+        }
+      }
+    }
+    > .body{
+      text-align: center;
+      padding-top:10px;
+      > textarea{
+        font-size: 1em;
+        border: none;
+        outline: none;
+        width:98%;
+        box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+        resize: none;
+        &:focus{
+          box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+        }
+      }
+    }
+    > .scale{
+      text-align: center;
+      padding-top:10px;
+      > input{
+        font-size: 1em;
+        border: none;
+        outline: none;
+        width:98%;
+        box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+        resize: none;
+        text-align: center;
+        &:focus{
+          box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+        }
+      }
+    }
+    > .save{
+      text-align: center;
+      padding-top:10px;
+      padding-bottom:10px;
+      > button {
+        cursor: pointer;
+        font-size: 1em;
+        padding:10px;
+        width:98%;
+      outline:0;
+      border:none;
+      background:rgb(20, 171, 186);
+
+      color:white;
+      &:active ,&:hover{
+        -webkit-filter:brightness(110%)
+      }
+      }
+    }
+    >   .exit{
+        text-align: center;
+
+        padding-bottom:10px;
+        > button{
+          cursor: pointer;
+          font-size: 1em;
+          padding:10px;
+          width:98%;
+        outline:0;
+        border:none;
+        background:rgb(242, 67, 67);
+
+        color:white;
+        &:active ,&:hover{
+          -webkit-filter:brightness(110%)
+        }
+        }
+      }
+  }
+
+}
+@media screen and (min-width:1000px){
+  .editor{
+    width:50%;
+    height:450px;
+    left:25%;
+    top:10%;
+  }
+}

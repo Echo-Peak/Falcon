@@ -1,0 +1,40 @@
+.add-clear{
+  position: fixed;
+  top:40px;
+  z-index: 10;
+  right:0;
+  //width:50%;
+  background: rgba(0,0,0,0.2);
+  color:white;
+  height:2em;
+  display: none;
+  transition: all .4s;
+  transform: translateX(100%) scale(0.6);
+  opacity: 0;
+  cursor: pointer;
+  line-height: 40px;
+
+&.animate{
+  transform: translateX(0%) scale(1);
+  opacity: 1;
+}
+> .current-group{
+  padding-left:10px;
+  padding-right: 10px;
+  width:180px;
+  font-size:0.8em;
+}
+  > .add{
+    position: absolute;
+    right:0;
+    height: inherit;
+
+  padding-left:10px;
+  padding-right:10px;
+  background:rgb(67, 224, 35);
+  i{
+    padding-left:5px;
+  }
+  }
+
+}

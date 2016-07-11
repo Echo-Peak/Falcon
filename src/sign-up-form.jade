@@ -1,0 +1,19 @@
+.auth-signup(data-element='auth-signup')
+  form(class="auth-signup-flex" data-element='auth-formdata')
+    .auth-username
+      h3 Username
+      input(type="text"  placeholder='Enter a usename' minlength='2' maxlength='24' data-element='auth-username')
+    .auth-email
+      h3 Email
+      input(type="text"  placeholder='enter your email' minlength='4' maxlength='52' data-element='auth-email')
+    .auth-password
+      h4 Password
+      div
+        input(type="password"  minlength='6' maxlength='32' placeholder='password' data-element='auth-password')
+        input(type="password"  minlength='6' maxlength='32' placeholder='confirm password' data-element='auth-confirm')
+      .auth-password-toggle
+        span(data-element='auth-password-visability') show
+    .auth-submit
+      button(type="submit" name="button" data-element='auth-submit') Submit
+    .auth-back
+      button(data-element='auth-back' type='button') Back

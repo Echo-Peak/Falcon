@@ -1,0 +1,81 @@
+@mixin authLogin($node , $order , $flex){
+  .auth-login-#{$node}{
+    flex:$flex;
+    order:$order;
+    text-align: center;
+    margin-top:50px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    > input {
+      width:100%;
+      padding:10px;
+      font-size: 1.2em;
+      outline: 0;
+      border:none;
+
+    &:focus{
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    }
+    }
+
+  }
+}
+
+.auth-login{
+
+  width:100%;
+  height:100%;
+  background:white;
+  //transition: all .4s;
+  display: none;
+  opacity: 0;
+  transform:translateY(-50%) scale(0.6);
+    &.animate{
+    transform:translateY(0%) scale(1);
+    opacity:1;
+  }
+
+> form{
+  display: flex;
+  flex-direction: column;
+  height:auto;
+  text-align: center;
+  @include authLogin('email', 1 ,1);
+  @include authLogin('password', 2 ,1);
+  @include authLogin('submit', 3 ,1);
+  .auth-login-back{
+    flex:1;
+    order:4;
+    width:100%;
+    > button{
+      cursor: pointer;
+      width:inherit;
+      height:50px;
+      border:none;
+      outline:none;
+      background:rgb(222, 62, 49);
+      color:white;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+      &:active , &:hover{
+        -webkit-filter:brightness(110%);
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+      }
+    }
+  }
+
+  .auth-login-submit > button{
+    background:rgb(71, 126, 209);
+    border:none;
+    outline:0;
+    color:white;
+    width:100%;
+    height:50px;
+    cursor: pointer;
+  &:hover ,&:active{
+    -webkit-filter:brightness(110%);
+  }
+  }
+  .auth-login-submit{margin-bottom: 10px;}
+}
+
+
+}

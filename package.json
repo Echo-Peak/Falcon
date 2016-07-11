@@ -1,0 +1,29 @@
+{
+  "name": "falcon",
+  "version": "1.0.0",
+  "description": "firbase app",
+  "scripts": {
+    "postinstall": "gulp init",
+    "start": "gulp init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Echo-Peak/Falcon.git"
+  },
+  "author": "Michael Wheeler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Echo-Peak/Falcon/issues"
+  },
+  "homepage": "https://github.com/Echo-Peak/Falcon#readme",
+  "devDependencies": {
+    "webpack": "*",
+    "gulp": "*",
+    "gulp-plumber": "*",
+    "browser-sync": "*",
+    "gulp-watch": "*",
+    "gulp-sass": "*",
+    "gulp-concat": "*",
+    "gulp-jade": "*"
+  }
+}

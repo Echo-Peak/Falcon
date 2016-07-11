@@ -1,0 +1,59 @@
+
+.pannel-flex{
+display: flex;
+flex-direction: row;
+  top:0px;
+  left:0px;
+  background: #222;
+  height: inherit;
+//  width:100%;
+  > .pannel-user{
+    order:1;
+    flex:10;
+    background:#222;
+  line-height: 40px;
+    color:white;
+padding-left: 10px;
+> h4 {
+  font-size: 16px;
+  font-size: 2em;
+  margin:0;
+}
+  }
+  > .switch-and-logout{
+    order:2;
+    flex:10;
+    background:#333;
+    line-height: 40px;
+    color:white;
+    padding-left: 10px;
+    display: none;
+    &.NON-TRANSFROM{
+      width:0;
+    }
+  }
+  > .pannel-settings{
+    order:3;
+    flex:1;
+    background:#222;
+    color:white;
+    padding-left: 10px;
+    text-align: right;
+    padding-right:10px;
+    // min-width: 30px;
+    // max-width: 40px;
+    cursor: pointer;
+    > i{
+      line-height: 40px;
+      font-size: 1.6em;
+    }
+
+  }
+
+
+}
+@media screen and (max-width:500px){
+  .pannel-flex > .pannel-user > h4{
+    font-size: 0.8em
+  }
+}

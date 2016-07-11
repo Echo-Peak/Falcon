@@ -1,0 +1,20 @@
+.settings(data-element='settings-element')
+  ul
+    .groups
+      .change(data-element='settings-changeGroup-button')
+        span Change Group
+      .add(data-element='settings-addGroup-button')
+        span Add Group
+        
+    .groupsUI(data-element='settings-groups')
+      .changeGroup
+        ul
+          
+      .addGroups
+        input(type="text" placeholder='Add Group')
+        button Add
+          
+    .clear(data-element='settings-clear-button') 
+      span Clear current list
+    .clear(data-element='settings-share') 
+      span(data-element='settings-share-button')  Share

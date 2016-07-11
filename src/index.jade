@@ -1,0 +1,53 @@
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0")
+    meta(charset="UTF-8")
+    title Falcon
+    link(href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css")
+    link(rel="stylesheet", href="styles.css")
+    link(rel='icon' ,href='demo.png')
+  body
+    .app
+      .container
+        .pannel(data-element='pannel')
+          .pannel-flex
+            .pannel-user
+              h4(data-element='user')  
+            .switch-and-logout
+              .logout(data-element='pannel-logout')
+                span 
+            .pannel-settings(data-element='settings')  
+              i.fa.fa-gear  
+              
+        .content
+          .undo-pannel-container(data-element='undo')
+            .undo-pannel
+              span Undo
+          .add-clear(data-element='add-clear')
+            .current-group
+              span(data-element='current-group') Default
+            .add(data-element='add')
+              span Add
+              i.fa.fa-plus
+            
+          include ./editor.jade
+          include ./homepage.jade
+          include ./settings.jade
+          include ./color-pannel.jade
+          .nothing-to-load(data-element='nothing')
+            h2 Nothing to load
+          ul(data-element='mount' class='mount')
+        
+    script(src='https://www.gstatic.com/firebasejs/live/3.0/firebase.js')
+    script.
+      var config = {
+      apiKey: "AIzaSyC_t5wHZIXceqv6N6nHXQYjCPe7V-oR4d4",
+       authDomain: "falcon-5eb88.firebaseapp.com",
+      databaseURL: "https://falcon-5eb88.firebaseio.com"
+      };
+      window.__firebase__ = firebase.initializeApp(config);
+
+
+    script(src='context.js')      
+        
