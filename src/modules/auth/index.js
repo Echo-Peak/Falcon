@@ -69,8 +69,8 @@ export default class Auth{
     this.Falcon.animations.homepage.show();
   }
   logout(){
-    $storage.del('lastGroup');
-    $storage.del('groups');
+    localStorage.groups = '["default"]';
+    localStorage.lastGroup = 'default';
     $storage.del('provider');
     $storage.del('ID');
     $storage.del('accessToken');
