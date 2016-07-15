@@ -316,8 +316,8 @@
 	  }, {
 	    key: 'logout',
 	    value: function logout() {
-	      _localStorage.$storage.del('lastGroup');
-	      _localStorage.$storage.del('groups');
+	      localStorage.groups = '["default"]';
+	      localStorage.lastGroup = 'default';
 	      _localStorage.$storage.del('provider');
 	      _localStorage.$storage.del('ID');
 	      _localStorage.$storage.del('accessToken');
@@ -645,7 +645,6 @@
 	exports.default = function (Falcon, DOM, animate, _) {
 	  var Template = '\n      <div class="list-item">\n      <div class="list-item-pannel" data-element=\'list-pannel\'>\n        <i class= \'fa fa-close\'></i>\n        <i class= \'fa fa-pencil\' data-element=\'edit\'></i>\n        <i class= \'fa fa-paint-brush\' data-element=\'colorize\'></i>\n\n      </div>\n      <div class="title">\n        <h2 data-element="title"></h2>\n      </div>\n      <div class="body" data-element="body" style=\'display:none\'>\n        <p data-element="body-p"></p>\n      </div>\n      <div class="scale" data-element="scale" style=\'display:none\'>\n        <h4 data-element="scale-text"></h4>\n        <div style=\'text-align:center\'>\n          <input type="range" value="0" max="10" step="1" data-element="scale-scale"/>\n        </div>\n      </div>\n    </div>\n\n  ';
 
-	  var flag = false;
 	  var offset = 0;
 
 	  function build(groupList) {
@@ -1354,16 +1353,16 @@
 	});
 	exports.default = localStorageSetup;
 	function localStorageSetup() {
-	  if (!localStorage.lastGroup) {
+	  if (localStorage.lastGroup === void 0 || localStorage.lastGroup === '' || localStorage.lastGroup == null) {
 	    localStorage.lastGroup = 'default';
 	  }
-	  if (!localStorage.groups) {
+	  if (localStorage.groups === void 0 || localStorage.groups === '' || localStorage.groups == null) {
 	    localStorage.groups = '["default"]';
 	  }
-	  if (!sessionStorage.deleted) {
+	  if (sessionStorage.deleted === void 0 || sessionStorage.deleted === '' || sessionStorage.deleted == null) {
 	    sessionStorage.deleted = '[]';
 	  }
-	  if (!sessionStorage.groups) {
+	  if (sessionStorage.groups === void 0 || sessionStorage.groups === '' || sessionStorage.groups == null) {
 	    sessionStorage.groups = '[]';
 	  }
 	}
