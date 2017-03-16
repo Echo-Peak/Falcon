@@ -2,6 +2,7 @@
   "name": "falcon",
   "version": "1.0.0",
   "description": "firbase app",
+  "homepage":"https://falcon-5eb88.firebaseapp.com/",
   "scripts": {
     "postinstall": "gulp init",
     "start": "gulp init"
@@ -10,8 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/Echo-Peak/Falcon.git"
   },
+  "engine":"node >= 6.9.5",
   "author": "Michael Wheeler",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Echo-Peak/Falcon/issues"
   },
